@@ -34,12 +34,4 @@ Here's a fenced HTML one (using tildes):
 
 Which to prefer? Backticks are easier to type (no shift) but tildes are easier to read in the plain text. Hmmm, I'll probably be inconsistent then.
 
-and here is a an inline code snippet `pupils.for_each(|p| { printf p.name })` but I don't know how to specifiy the language for that.
-
-This is yet another fencing style:
-
-``` ruby
-loop
-  $stdout 10.to_s
-end
-```
+Here is a an inline code snippet `pupils.for_each(|p| { printf p.name })` but I don't know how to specifiy the language for that, yet.
