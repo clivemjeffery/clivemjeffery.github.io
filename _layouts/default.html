@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/solo.css" />
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="canonical" href="{{ site.ull }}" />
+  </head>
   <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <article>
+     <div class="container">
+      {{ content }}
       </div>
-    </div>
-
-    {% include footer.html %}
-
+    </article>
   </body>
-
 </html>
+

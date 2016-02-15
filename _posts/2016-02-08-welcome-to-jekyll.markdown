@@ -12,7 +12,3 @@ end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
-
-Check me out at [rosedene's website][rosedene].
-
-[rosedene]: http://www.rosedene.com

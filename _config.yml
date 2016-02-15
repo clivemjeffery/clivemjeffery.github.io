@@ -6,12 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Tech Notes
+title: Clive Jeffery
 email: clive@rosedene.com
-description: > # this means to ignore newlines until "baseurl:"
-  A blog for my technical notes.
+description: A blog for my technical notes.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://clivemjeffery.github.io" # the base hostname & protocol for your site
 twitter_username: CliveJeffery
 github_username:  clivemjeffery
 

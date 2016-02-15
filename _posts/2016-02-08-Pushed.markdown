@@ -1,4 +1,4 @@
 ---
 layout: post
 ---
-# Yay! Pushed to github and posted a new post.
+Yay! Pushed to github and posted a new post.
