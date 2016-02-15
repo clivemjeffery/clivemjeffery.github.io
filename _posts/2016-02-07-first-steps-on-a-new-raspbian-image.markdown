@@ -1,7 +1,7 @@
 ---
 layout: post
 ---
-# General First Steps On A New Raspbian Image
+## General First Steps On A New Raspbian Image
 
 Most of this stuff is from <https://www.raspberrypi.org/documentation>
 Check it out if things go wrong or you've forgotten a step.
@@ -86,7 +86,7 @@ $ sudo apt-get install -y python-setuptools
 
 $ sudo apt-get install python-pip
 
-# Dependencies for QBike
+## Dependencies for QBike
 
 These are from Johannes Bader's blog at http://www.johannesbader.ch/2014/06/track-your-heartrate-on-raspberry-pi-with-ant/
 
