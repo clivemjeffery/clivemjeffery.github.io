@@ -8,17 +8,17 @@ Check it out if things go wrong or you've forgotten a step.
 
 Find the disk number of the sd card with
 
-~~~
-$ diskutils list
-~~~
+```
+mac$ diskutils list
+```
 
 and install to sd card with
 
 ~~~
-$ sudo dd bs=1m if=2015-05-05-raspbian-wheezy.img of=/dev/rdiskN
+mac$ sudo dd bs=1m if=2015-05-05-raspbian-wheezy.img of=/dev/rdiskN
 ~~~
 
-from my Disk\ Images folder where N is the disk number for the sd card.
+from my `Disk\ Images` folder where `N` is the disk number for the sd card.
 
 Log into the pi via ssh and run raspi-config to expand the file system,
 set the hostname and so on.
@@ -29,7 +29,9 @@ probably due to the static ip address I set for the Music Box tryout).
 
 Check how much disk is used with
 
-$ df -h
+```
+pi$ df -h
+```
 
 and remember ready for the upgrade step next.
 

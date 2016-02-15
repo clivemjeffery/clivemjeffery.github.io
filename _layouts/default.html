@@ -6,8 +6,11 @@
     <meta name="description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/solo.css" />
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <!-- TODO: find out which is best between the prepend above and below. -->
+    <link rel="stylesheet" href="{{ site.github.url }}/css/normalize.css" />
+    <link rel="stylesheet" href="{{ site.github.url }}/css/solo.css" />
+    <!-- TODO: move styles in normallize solo into main via sass -->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <link rel="canonical" href="{{ site.ull }}" />
   </head>
