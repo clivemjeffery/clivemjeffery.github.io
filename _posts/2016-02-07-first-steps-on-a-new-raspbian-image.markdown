@@ -1,16 +1,16 @@
 ---
 layout: post
 ---
-## General First Steps On A New Raspbian Image
+### Intialising a new image
 
 Most of this stuff is from <https://www.raspberrypi.org/documentation>
 Check it out if things go wrong or you've forgotten a step.
 
 Find the disk number of the sd card with
 
-```
+~~~
 mac$ diskutils list
-```
+~~~
 
 and install to sd card with
 
@@ -23,96 +23,84 @@ from my `Disk\ Images` folder where `N` is the disk number for the sd card.
 Log into the pi via ssh and run raspi-config to expand the file system,
 set the hostname and so on.
 
-Note that fing on my phone finds the new pi
-better than the bthomehub finds it in Home Network (though that was
-probably due to the static ip address I set for the Music Box tryout).
+[Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en) on my phone finds the new pi better than the bthomehub finds it in Home Network (must find out why, at some point).
 
-Check how much disk is used with
+Check how much disk is used (and remember ready for the upgrade step next).
 
-```
+~~~
 pi$ df -h
-```
-
-and remember ready for the upgrade step next.
+~~~
 
 Update and upgrade the install with
 
-$ sudo apt-get update
+~~~
+pi$ sudo apt-get update
+pi$ sudo apt-get upgrade
+~~~
 
-$ sudo apt-get upgrade
+The pi docs warn that there might not be enough space for the upgrade, though I've not encountered this yet. You need check the space required is available and either continue or abort when prompted by the step above. If there isn't enough space, then
 
-If there isn't enough space for upgrade (it tells you before doing it),
-then
-
+~~~
 $ sudo apt-get clean
+~~~
 
-will remove any old package archives and might free up enough.
-Probably a good idea to reboot after this.
+will remove any old package archives and might free up enough. Probably a good idea to reboot after this.
+
+### Useful Tools
+
+#### VNC
 
 Install tightvncserver and my runner script with
 
-$ sudo apt-get install tightvncserver
+~~~
+pi$ sudo apt-get install tightvncserver
+~~~
 
-on the pi and
+~~~
+mac$ scp vncs.sh pi@piname:/home/pi
+~~~
 
-$ scp vncs.sh pi@piglowpi:/home/pi
+on the mac in the same folder as this text file. The content of the `vncs.sh` shell script is quite minimal and just launches sthe server with some settings I find work for me.
 
-on the mac in the same folder as this text file.
+~~~
+#!/bin/sh
+vncserver :0 -geometry 1920x1080 -depth 24
+~~~
 
-Configure git with
+#### Configure Git
 
-$ git config --global user.name "clivemjeffery"
-
-$ git config --global user.email "clive@rosedene.com"
+~~~
+pi$ git config --global user.name "clivemjeffery"
+pi$ git config --global user.email "clive@rosedene.com"
+~~~
 
 which set my github credentials, and
 
-$ git config --global credential.helper cache
+~~~
+pi$ git config --global credential.helper cache
+~~~
 
-which will cache passwords for 1 hour (extended from default of 15 mins).
-These require git version 1.7.10 and the latest wheezy has 1.7.10.4 so it
-should work. It might also be good to set the line-ending behaviour with
+which will cache passwords for 1 hour (extended from default of 15 mins). These require git version 1.7.10 and the latest wheezy has 1.7.10.4 so it should work. It might also be good to set the line-ending behaviour with
 
-$ git config --global core.autocrlf input
+~~~
+pi$ git config --global core.autocrlf input
+~~~
 
-The same thing can be done on Windows with true as the argument. Even
-better might be a per-repository setting in a .gitattributes file, see
-https://help.github.com/articles/dealing-with-line-endings
-Get a github project like qbike with
+The same thing can be done on Windows with true as the argument. Even better might be a per-repository setting in a .gitattributes file, see [here](https://help.github.com/articles/dealing-with-line-endings).
 
-$ git clone https://github.com/clivemjeffery/qbike.git
+After this I can get a github project like qbike with
 
-# Some Python Utilities
+~~~
+pi$ git clone https://github.com/clivemjeffery/qbike.git
+~~~
 
+#### Python Utilities
+
+The python utilities [pip](https://pip.pypa.io/en/stable/) and [setuptools](https://pypi.python.org/pypi/setuptools) are essential for qbike and will be pretty useful for any python development.
+
+~~~
 $ sudo apt-get install -y python-setuptools
-
 $ sudo apt-get install python-pip
+~~~
 
-## Dependencies for QBike
-
-These are from Johannes Bader's blog at http://www.johannesbader.ch/2014/06/track-your-heartrate-on-raspberry-pi-with-ant/
-
-Put in the USB ANT stick and 
-
-$ lsusb
-
-to check the vendor and product id. We're looking for Dnastream Innovations, Inc.
-The data has been 0fcf:1009 (vendor:product) for both my Garmin and Suunto devices.
-
-Create the udev rule that will make a usb node for the device.
-
-$ ls /etc/udev/rules.d
-
-To see what's there, then unplug the device and
-
-$ sudo nano /etc/udev/rules.d/20-antplus.rules
-
-to create the new rule file. The prefix numbers will order the rules setup by the daemon.
-
-Plug it back in and check for a /dev/ttyUSB0 node that represents the ANT+ device.
-
-Get python-ant (Johannes Bader's fork with the movestick fixes).
-
-GOT UP TO HERE (DECIDE WHICH python-ant TO USE)
-
-$ git clone https://github.com/baderj/python-ant.git
+It seems that `pip` is more modern than `setuptools` but it is best to have both. 
