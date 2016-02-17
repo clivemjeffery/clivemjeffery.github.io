@@ -22,6 +22,10 @@ $ git --version
 git version 2.5.4 (Apple Git-61)
 ~~~
 
+### Various
+
+Looks like this might be a good sequence: https://www.reddit.com/r/ruby/comments/3n26gt/upgrade_to_el_capitan_with_homebrew_ruby/
+
 ### RVM
 
 Reading the [RVM install guide](https://rvm.io/rvm/install), some do-it-all rails installers are mentioned but the [RailsInstaller](http://railsinstaller.org/en) one comes with warnings about OS X Mavericks and does not list El Capitan in the Mac Downloads section. I think I'll go with RVM and install rails from there.
