@@ -6,6 +6,6 @@ layout: default
 
 ## Welcome
 
-There will be [posts](posts.html), projects and more to peruse. The one thing I broke while tidying up just now was by deleting the index layout (the one for this file). The only difference was the site title above 'Welcome', which I've <strike>explicity</strike> liquidly typed in.
+Hi, I live and work in Yorkshire in the North of England. I love to teach, code, [read](books.html) and create, and always have a number of [projects](projects.html) on the go. These pages are to help me to keep track of [everything](posts.html) and present the good stuff well.
 
-{{ site.time }}
+I publish using [Jekyll](http://jekyllrb.com/) with a theme by [Adam Dueck](http://www.adamdueck.com/).

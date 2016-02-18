@@ -7,6 +7,18 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
   </header>
 
+  <div class="book-info">
+    <img src="{{ page.cover }}" width="25%" class="book-cover"/>
+    <div><h2>{{ page.author }}</h2></div>
+    <div>Publisher: {{ page.publisher }}</div>
+    <div>Date: {{page.year}}</div>
+    <div>ISBN: {{ page.isbn }}</div>
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
