@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign howto_for = page.path | split:"/" %}
+<article class="howto">
+
+  <header class="howto-header">
+    <h1 class="howto-title">{{ howto_for[1] }} How To</h1>
+    <h2 class="howto-title">{{ page.title }}</h2>
+  </header>
+
+  <div class="howto-content">
+    {{ content }}
+  </div>
+
+</article>

@@ -20,3 +20,15 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+collections:
+  howtos:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "howtos" # default layout for howto documents
+    values:
+      layout: "howto"
