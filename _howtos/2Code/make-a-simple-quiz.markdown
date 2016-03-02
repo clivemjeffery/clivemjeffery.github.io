@@ -12,9 +12,16 @@ The last challenge in this lesson is to make your own quiz. This video will remi
 
 ### Copying Questions
 
-You need more than one question to make a quiz. Luckily, there is a way to copy them. Brave coders can use the 'See Code' button copy the real Javascript they've been building with blocks. The video shows you how.
+You need more than one question to make a quiz. Luckily, there is a way to copy them. Brave coders can use the 'See Code' button to copy the real Javascript they've been building with blocks. The video shows you how.
 
 <video controls>
   <source src="http://res.cloudinary.com/rosedene/video/upload/v1456953956/y4quizcode2_x3fk5a.mp4" type="video/mp4"/>
+  Your browser can't show the video.
+</video>
+
+Here's the important steps in less than a minute and a half.
+
+<video controls>
+  <source src="http://res.cloudinary.com/rosedene/video/upload/v1456956649/y4quizcode2-1_p4crr9.mov" type="video/mp4"/>
   Your browser can't show the video.
 </video>
