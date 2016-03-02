@@ -3,11 +3,6 @@ title: Do A Roof
 ---
 Here are instructions on how to add various types of roof to a cuboid shaped building box. Obviously, your cuboid comes with a flat roof as standard, but we know they're rubbish, don't we?
 
-Animated GIF Direct
-
-
-HTML5 video
-
 <video controls>
   <source src="http://res.cloudinary.com/rosedene/video/upload/c_scale,w_472/v1456863634/blog/howtos/SketchUp/testbox2.mp4" type="video/mp4"/>
   Your browser can't show the video.
