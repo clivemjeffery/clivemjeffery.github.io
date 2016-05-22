@@ -5,7 +5,7 @@ title: Finally Updated OS X
 
 ## El Capitan is on the iMac!
 
-These were the stages.
+These are notes I took on the way and will update as things get fixed or anything else breaks.
 
 ### Manually ran the installer
 
@@ -34,6 +34,17 @@ Having just re-read that post (from February!) I need to report success and link
 ### Wrote this and tried Jekyll
 
 Jekyll worked without updates, though there may be some worth getting (check later). Deployment needs git, so I checked that.
+
+~~~
+$ git --version
+git version 2.2.1
+~~~
+
+Recalling that the previous install on the Macbook reported `version 2.5.4 (Apple Git-61)`, this looks like a different path thing (again). Notwithstanding, it worked to check in, merge and deploy these changes up to github pages.
+
+### Check Jack's login and email
+
+This is important!
 
 
 
