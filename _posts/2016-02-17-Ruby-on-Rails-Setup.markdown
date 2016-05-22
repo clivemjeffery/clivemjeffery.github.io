@@ -28,7 +28,7 @@ git version 2.5.4 (Apple Git-61)
 
 ### Java - get a  JDK
 
-A JDK might come in handy, especially if I want to run a JRuby. Shoes 4 uses JRuby so I'll get this now. RubyMine is a Java app too. So I did the `java` thing in terminal, opened the web page, downloaded and installed the latest JDK (8 74). The installer passed on a link to some developer's [getting started](http://docs.oracle.com/javase/tutorial/getStarted/index.html) resources; they might be useful later.
+A JDK might come in handy, especially if I want to run a JRuby. Shoes 4 uses JRuby so I'll get this now. RubyMine is a Java app too. So I did the `java` thing in terminal, opened the web page, downloaded and installed the latest JDK (8 74). The installer passed on a link to developers' [getting started](http://docs.oracle.com/javase/tutorial/getStarted/index.html) resources; they might be useful later.
 
 ### Homebrew
 
@@ -80,3 +80,7 @@ I also have rails 4.2.5.1. Time to test it!
 ### Postgres
 
 First, of course, I'll need Postgres. Galtzo recommended the [Postgres App](http://postgresapp.com), although it could be installed with Homebrew. I'll go with the app. Downloaded, moved to Applications, run and set the auto-start option.
+
+### Onwards to WordPug
+
+A test Rails application is called for and so, onwards to [WordPug]({% post_url 2016-02-18-Started-Wordpug %})!
